@@ -8,6 +8,8 @@ const NavLinkComp = () => {
             <Link to="/">Home</Link>
             {path !== "/about" && <Link to="/about">About</Link>}
             <Link to="/contact">Contact</Link>
+            <Link to="/css-selectors">CSS Selectors</Link>
+            <Link to="/box-model">Box Model</Link>
         </nav>
     </>
     )

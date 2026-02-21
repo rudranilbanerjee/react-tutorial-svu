@@ -1,0 +1,1336 @@
+/* ================================================
+   COMPLETE CSS SELECTORS REFERENCE
+   All CSS Selectors in One File
+   ================================================ */
+
+/* ================================================
+   1. UNIVERSAL SELECTOR ( * )
+   Selects ALL elements
+   ================================================ */
+.universal-demo * {
+  color: #b02121;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================================================
+   2. TYPE / ELEMENT SELECTOR
+   Selects all elements of a given HTML tag
+   ================================================ */
+.type-demo p {
+  color: #2e7d32;
+  line-height: 1.6;
+}
+
+.type-demo span {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ================================================
+   3. CLASS SELECTOR ( .className )
+   Selects all elements with the given class
+   ================================================ */
+.highlight {
+  background: #fff176;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   4. ID SELECTOR ( #idName )
+   Selects a single element with the given id
+   ================================================ */
+#unique-element {
+  border: 3px solid #d32f2f;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffebee;
+}
+
+/* ================================================
+   5. GROUPING SELECTOR ( A, B )
+   Selects all elements matching A or B
+   ================================================ */
+.group-a,
+.group-b {
+  color: #1b5e20;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+/* ================================================
+   6. DESCENDANT SELECTOR ( A B )
+   Selects B that is a descendant of A (any level)
+   ================================================ */
+.ancestor span {
+  color: #6a1b9a;
+  font-weight: bold;
+  background: #f3e5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   7. CHILD SELECTOR ( A > B )
+   Selects B that is a DIRECT child of A
+   ================================================ */
+.parent > p {
+  background: #e0f7fa;
+  padding: 8px;
+  border-left: 4px solid #00acc1;
+}
+
+/* ================================================
+   8. ADJACENT SIBLING SELECTOR ( A + B )
+   Selects B immediately after A (same parent)
+   ================================================ */
+.first-sibling + p {
+  color: #d32f2f;
+  font-weight: bold;
+  border-left: 4px solid #d32f2f;
+  padding-left: 10px;
+}
+
+/* ================================================
+   9. GENERAL SIBLING SELECTOR ( A ~ B )
+   Selects ALL B that come after A (same parent)
+   ================================================ */
+.general-sibling-demo .gen-sibling ~ p {
+  color: #e65100;
+  font-weight: bold;
+  border-left: 4px solid #e65100;
+  padding-left: 10px;
+}
+
+/* ================================================
+   10. ATTRIBUTE SELECTOR ( [attr] )
+   Selects elements that HAVE the attribute
+   ================================================ */
+.attr-demo [title] {
+  border-bottom: 2px dotted #616161;
+  cursor: help;
+}
+
+/* ================================================
+   11. ATTRIBUTE VALUE SELECTOR ( [attr="value"] )
+   Selects elements whose attribute equals exact value
+   ================================================ */
+[data-type="primary"] {
+  background: #bbdefb;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   12. ATTRIBUTE STARTS WITH ( [attr^="value"] )
+   Selects elements whose attribute starts with value
+   ================================================ */
+[data-info^="hello"] {
+  color: #00695c;
+  font-weight: bold;
+}
+
+/* ================================================
+   13. ATTRIBUTE ENDS WITH ( [attr$="value"] )
+   Selects elements whose attribute ends with value
+   ================================================ */
+[data-info$="world"] {
+  font-style: italic;
+}
+
+/* ================================================
+   14. ATTRIBUTE CONTAINS ( [attr*="value"] )
+   Selects elements whose attribute contains substring
+   ================================================ */
+[data-info*="mid"] {
+  text-decoration: underline;
+  text-decoration-color: #e91e63;
+  text-underline-offset: 4px;
+}
+
+/* ================================================
+   15. ATTRIBUTE CONTAINS WORD ( [attr~="value"] )
+   Selects elements whose attr has space-separated word
+   ================================================ */
+[data-tags~="css"] {
+  background: #fff9c4;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   16. ATTRIBUTE LANG / HYPHEN ( [attr|="value"] )
+   Selects attr="value" or attr="value-*"
+   ================================================ */
+[lang|="en"] {
+  font-family: Georgia, serif;
+}
+
+/* ================================================
+   17. :hover PSEUDO-CLASS
+   Selects element when mouse hovers
+   ================================================ */
+.hover-box {
+  padding: 15px 25px;
+  background: #e8eaf6;
+  border: 2px solid #3f51b5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.hover-box:hover {
+  background: #c8e6c9;
+  border-color: #2e7d32;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================================
+   18. :active PSEUDO-CLASS
+   Selects element while being clicked
+   ================================================ */
+.active-btn {
+  padding: 10px 24px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.1s;
+}
+
+.active-btn:active {
+  background: #ff5722;
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================================
+   19. :focus PSEUDO-CLASS
+   Selects element when it receives focus
+   ================================================ */
+.focus-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  width: 300px;
+}
+
+.focus-input:focus {
+  outline: 3px solid #1976d2;
+  outline-offset: 2px;
+  background: #e3f2fd;
+  border-color: #1976d2;
+}
+
+/* ================================================
+   20. :focus-within PSEUDO-CLASS
+   Selects parent when any child receives focus
+   ================================================ */
+.focus-within-box {
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.focus-within-box:focus-within {
+  border: 3px solid #1976d2;
+  background: #e8eaf6;
+  box-shadow: 0 0 10px rgba(25, 118, 210, 0.3);
+}
+
+.focus-within-box input {
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+/* ================================================
+   21. :focus-visible PSEUDO-CLASS
+   Focus visible for keyboard navigation
+   ================================================ */
+.focus-visible-btn {
+  padding: 10px 24px;
+  background: #7b1fa2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.focus-visible-btn:focus-visible {
+  outline: 3px dashed #ff6f00;
+  outline-offset: 3px;
+}
+
+/* ================================================
+   22. :visited PSEUDO-CLASS
+   Selects links that have been visited
+   ================================================ */
+a.visited-link:visited {
+  color: #6a1b9a;
+}
+
+a.visited-link {
+  font-size: 1.05rem;
+}
+
+/* ================================================
+   23. :link PSEUDO-CLASS
+   Selects all unvisited links
+   ================================================ */
+a.link-example:link {
+  color: #1565c0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ================================================
+   24. :first-child PSEUDO-CLASS
+   Selects the first child of its parent
+   ================================================ */
+.first-child-demo p:first-child {
+  color: #c62828;
+  font-weight: bold;
+  border-left: 5px solid #c62828;
+  padding-left: 10px;
+}
+
+/* ================================================
+   25. :last-child PSEUDO-CLASS
+   Selects the last child of its parent
+   ================================================ */
+.last-child-demo p:last-child {
+  color: #2e7d32;
+  font-weight: bold;
+  border-left: 5px solid #2e7d32;
+  padding-left: 10px;
+}
+
+/* ================================================
+   26. :nth-child() PSEUDO-CLASS
+   Selects element based on position
+   ================================================ */
+.nth-child-demo {
+  list-style: none;
+  padding: 0;
+}
+
+.nth-child-demo li {
+  padding: 10px 15px;
+  margin: 3px 0;
+  border-radius: 4px;
+}
+
+.nth-child-demo li:nth-child(odd) {
+  background: #f5f5f5;
+}
+
+.nth-child-demo li:nth-child(even) {
+  background: #e8eaf6;
+}
+
+.nth-child-demo li:nth-child(2) {
+  background: #ffccbc;
+  font-weight: bold;
+  border-left: 5px solid #ff5722;
+}
+
+/* ================================================
+   27. :nth-last-child() PSEUDO-CLASS
+   nth-child but counts from the end
+   ================================================ */
+.nth-last-child-demo {
+  list-style: none;
+  padding: 0;
+}
+
+.nth-last-child-demo li {
+  padding: 8px 15px;
+  margin: 3px 0;
+}
+
+.nth-last-child-demo li:nth-last-child(1) {
+  background: #c8e6c9;
+  font-weight: bold;
+  border-left: 5px solid #2e7d32;
+  border-radius: 4px;
+}
+
+/* ================================================
+   28. :first-of-type PSEUDO-CLASS
+   Selects first element of its type among siblings
+   ================================================ */
+.first-of-type-demo span:first-of-type {
+  color: #c62828;
+  font-weight: bold;
+  background: #ffcdd2;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   29. :last-of-type PSEUDO-CLASS
+   Selects last element of its type among siblings
+   ================================================ */
+.last-of-type-demo span:last-of-type {
+  color: #1565c0;
+  font-weight: bold;
+  background: #bbdefb;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   30. :nth-of-type() PSEUDO-CLASS
+   Selects nth element of its type
+   ================================================ */
+.nth-of-type-demo p:nth-of-type(2) {
+  background: #ffe0b2;
+  padding: 8px;
+  border-left: 5px solid #ff9800;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ================================================
+   31. :nth-last-of-type() PSEUDO-CLASS
+   nth of type counting from the end
+   ================================================ */
+.nth-last-of-type-demo p:nth-last-of-type(1) {
+  background: #e1bee7;
+  padding: 8px;
+  border-left: 5px solid #8e24aa;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* ================================================
+   32. :only-child PSEUDO-CLASS
+   Selects element that is the only child
+   ================================================ */
+.only-child-demo p:only-child {
+  color: #c62828;
+  font-weight: bold;
+  background: #ffebee;
+  padding: 10px;
+  border: 2px solid #c62828;
+  border-radius: 6px;
+}
+
+/* ================================================
+   33. :only-of-type PSEUDO-CLASS
+   Selects element that is only of its type
+   ================================================ */
+.only-of-type-demo span:only-of-type {
+  color: #1b5e20;
+  font-weight: bold;
+  background: #c8e6c9;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   34. :empty PSEUDO-CLASS
+   Selects elements with no children
+   ================================================ */
+.empty-demo div:empty {
+  width: 100px;
+  height: 40px;
+  background: #ef9a9a;
+  border: 2px dashed #c62828;
+  border-radius: 4px;
+}
+
+/* ================================================
+   35. :not() PSEUDO-CLASS (Negation)
+   Selects elements that do NOT match
+   ================================================ */
+.not-demo p:not(.exclude) {
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.not-demo p.exclude {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* ================================================
+   36. :is() PSEUDO-CLASS
+   Matches any element in the list
+   ================================================ */
+.is-demo :is(h3, h4, h5) {
+  color: #e65100;
+  margin: 5px 0;
+}
+
+/* ================================================
+   37. :where() PSEUDO-CLASS
+   Same as :is() but zero specificity
+   ================================================ */
+.where-demo :where(p, span) {
+  color: #6a1b9a;
+  font-weight: bold;
+}
+
+/* ================================================
+   38. :has() PSEUDO-CLASS (Parent Selector)
+   Selects parent if it contains matching child
+   ================================================ */
+.has-demo div:has(> img) {
+  border: 3px solid #2e7d32;
+  padding: 10px;
+  border-radius: 8px;
+  background: #e8f5e9;
+}
+
+/* ================================================
+   39. :checked PSEUDO-CLASS
+   Selects checked checkboxes/radios
+   ================================================ */
+input.check-demo:checked + label {
+  color: #2e7d32;
+  font-weight: bold;
+  background: #c8e6c9;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ================================================
+   40. :disabled PSEUDO-CLASS
+   Selects disabled form elements
+   ================================================ */
+input:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ================================================
+   41. :enabled PSEUDO-CLASS
+   Selects enabled form elements
+   ================================================ */
+.enabled-demo input:enabled {
+  border: 2px solid #2e7d32;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   42. :required PSEUDO-CLASS
+   Selects form elements with required attribute
+   ================================================ */
+.required-demo input:required {
+  border-left: 5px solid #d32f2f;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   43. :optional PSEUDO-CLASS
+   Selects form elements NOT required
+   ================================================ */
+.optional-demo input:optional {
+  border-left: 5px solid #9e9e9e;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   44. :valid PSEUDO-CLASS
+   Selects valid form inputs
+   ================================================ */
+.valid-demo input:valid {
+  border: 2px solid #2e7d32;
+  padding: 8px;
+  border-radius: 4px;
+  background: #e8f5e9;
+}
+
+/* ================================================
+   45. :invalid PSEUDO-CLASS
+   Selects invalid form inputs
+   ================================================ */
+.invalid-demo input:invalid {
+  border: 2px solid #d32f2f;
+  background: #ffebee;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   46. :in-range & :out-of-range PSEUDO-CLASSES
+   Selects number inputs based on min/max
+   ================================================ */
+.range-demo input:in-range {
+  background: #c8e6c9;
+  border: 2px solid #2e7d32;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.range-demo input:out-of-range {
+  background: #ffcdd2;
+  border: 2px solid #d32f2f;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   47. :read-only PSEUDO-CLASS
+   Selects non-editable elements
+   ================================================ */
+.readonly-demo input:read-only {
+  background: #f5f5f5;
+  color: #999;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* ================================================
+   48. :read-write PSEUDO-CLASS
+   Selects editable elements
+   ================================================ */
+.readwrite-demo input:read-write {
+  border: 2px solid #1976d2;
+  padding: 8px;
+  border-radius: 4px;
+  background: #e3f2fd;
+}
+
+/* ================================================
+   49. :placeholder-shown PSEUDO-CLASS
+   Selects input when placeholder is visible
+   ================================================ */
+.placeholder-demo input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 350px;
+}
+
+.placeholder-demo input:placeholder-shown {
+  border: 2px dashed #ff9800;
+  background: #fff3e0;
+}
+
+/* ================================================
+   50. :target PSEUDO-CLASS
+   Selects element matching URL #fragment
+   ================================================ */
+#target-section:target {
+  background: #fff9c4;
+  border: 3px solid #ffd600;
+  border-radius: 6px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+/* ================================================
+   51. :root PSEUDO-CLASS
+   Selects root element (<html>), used for CSS vars
+   ================================================ */
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #ff6f00;
+  --spacing: 10px;
+  --border-radius: 8px;
+}
+
+.root-demo p {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.root-demo code {
+  background: #e3f2fd;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--primary-color);
+}
+
+/* ================================================
+   52. :lang() PSEUDO-CLASS
+   Selects based on language attribute
+   ================================================ */
+p:lang(fr) {
+  font-style: italic;
+  color: #1565c0;
+  border-left: 4px solid #1565c0;
+  padding-left: 10px;
+}
+
+/* ================================================
+   53. :any-link PSEUDO-CLASS
+   Selects all links (visited + unvisited)
+   ================================================ */
+.anylink-demo a:any-link {
+  color: #d32f2f;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+/* ================================================
+   54. :default PSEUDO-CLASS
+   Selects default form element in a group
+   ================================================ */
+.default-demo input:default + label {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ================================================
+   55. :indeterminate PSEUDO-CLASS
+   Selects indeterminate checkboxes/progress
+   ================================================ */
+.indeterminate-demo progress:indeterminate {
+  opacity: 0.5;
+}
+
+/* ================================================
+   56. ::before PSEUDO-ELEMENT
+   Inserts content BEFORE element content
+   ================================================ */
+.before-demo::before {
+  content: "👉 ";
+  font-size: 1.2em;
+}
+
+/* ================================================
+   57. ::after PSEUDO-ELEMENT
+   Inserts content AFTER element content
+   ================================================ */
+.after-demo::after {
+  content: " ✅";
+  font-size: 1.2em;
+}
+
+/* ================================================
+   58. ::first-line PSEUDO-ELEMENT
+   Selects first line of block element
+   ================================================ */
+.first-line-demo::first-line {
+  font-weight: bold;
+  color: #0d47a1;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+/* ================================================
+   59. ::first-letter PSEUDO-ELEMENT
+   Selects first letter of block element
+   ================================================ */
+.first-letter-demo::first-letter {
+  font-size: 2.8em;
+  color: #c62828;
+  float: left;
+  margin-right: 6px;
+  line-height: 0.85;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================================
+   60. ::selection PSEUDO-ELEMENT
+   Styles user-selected (highlighted) text
+   ================================================ */
+.selection-demo::selection {
+  background: #ffeb3b;
+  color: #000;
+}
+
+.selection-demo::-moz-selection {
+  background: #ffeb3b;
+  color: #000;
+}
+
+/* ================================================
+   61. ::placeholder PSEUDO-ELEMENT
+   Styles placeholder text in inputs
+   ================================================ */
+.placeholder-style-demo {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 350px;
+}
+
+.placeholder-style-demo::placeholder {
+  color: #e91e63;
+  font-style: italic;
+  opacity: 1;
+}
+
+/* ================================================
+   62. ::marker PSEUDO-ELEMENT
+   Styles bullet/number of list items
+   ================================================ */
+.marker-demo li::marker {
+  color: #e91e63;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.marker-demo li {
+  padding: 4px 0;
+}
+
+/* ================================================
+   63. ::file-selector-button PSEUDO-ELEMENT
+   Styles file input button
+   ================================================ */
+.file-demo::file-selector-button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-right: 12px;
+  transition: background 0.3s;
+}
+
+.file-demo::file-selector-button:hover {
+  background: #1565c0;
+}
+
+/* ================================================
+   64. CSS NESTING SELECTOR ( & )
+   Native CSS nesting
+   ================================================ */
+.nesting-demo {
+  color: #333;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: background 0.3s;
+
+  & .nested-child {
+    color: #1565c0;
+    font-weight: bold;
+    background: #e3f2fd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  &:hover {
+    background: #f3e5f5;
+    border-color: #9c27b0;
+  }
+}
+
+/* ================================================
+   65. COLUMN COMBINATOR ( || ) — Experimental
+   Selects table cells by column
+   (Fallback using nth-child for demo)
+   ================================================ */
+.column-demo {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.column-demo th,
+.column-demo td {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.column-demo th {
+  background: #1976d2;
+  color: white;
+}
+
+/* Fallback: highlight second column */
+.column-demo td:nth-child(2) {
+  background: #fff9c4;
+  font-weight: bold;
+}
+
+.column-demo .selected-col {
+  background: #fff9c4;
+}
+
+/* ================================================
+   NAVIGATION BAR — Pagination Controls
+   ================================================ */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border: 1px solid #e0e0e0;
+}
+
+.nav-bar-bottom {
+  margin-top: 20px;
+  margin-bottom: 0;
+  position: static;
+}
+
+/* Arrow Buttons */
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 42px;
+  border: 2px solid #1976d2;
+  background: #e3f2fd;
+  color: #1976d2;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 14px;
+  user-select: none;
+}
+
+.nav-arrow:hover:not(:disabled) {
+  background: #1976d2;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(25, 118, 210, 0.35);
+}
+
+.nav-arrow:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: #bbb;
+  background: #f5f5f5;
+  color: #999;
+}
+
+/* Center: Dropdown + Counter */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-dropdown {
+  padding: 8px 14px;
+  font-size: 0.95em;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  max-width: 350px;
+  min-width: 200px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.nav-dropdown:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+}
+
+.nav-counter {
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #1976d2;
+  background: #e3f2fd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Progress Bar */
+.nav-progress-bar {
+  width: 100%;
+  height: 5px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.nav-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* ================================================
+   PAGE LAYOUT & SHARED STYLES
+   ================================================ */
+.css-selectors-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.css-selectors-page > h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #1976d2;
+}
+
+.selector-section {
+  margin: 30px 0;
+  padding: 20px 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #1976d2;
+}
+
+.selector-section h2 {
+  color: #0d47a1;
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e3f2fd;
+}
+
+.selector-section .description {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* --- Two-Column Layout: Left (editors) + Right (notes) --- */
+.section-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.section-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-right {
+  width: 320px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+}
+
+.notes-panel {
+  background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 50%, #e8eaf6 100%);
+  border: 2px solid #ce93d8;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 8px rgba(156, 39, 176, 0.1);
+}
+
+.notes-title {
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ce93d8;
+}
+
+.notes-content {
+  font-size: 0.88em;
+  line-height: 1.65;
+  color: #4a148c;
+}
+
+.notes-content b,
+.notes-content strong {
+  color: #6a1b9a;
+}
+
+.notes-content ul {
+  margin: 6px 0;
+  padding-left: 18px;
+}
+
+.notes-content ul li {
+  margin-bottom: 4px;
+}
+
+.notes-content code {
+  background: rgba(106, 27, 154, 0.1);
+  color: #4a148c;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.92em;
+}
+
+.notes-content .note-section {
+  margin-bottom: 10px;
+}
+
+.notes-content .note-section-title {
+  font-weight: bold;
+  color: #4a148c;
+  font-size: 0.92em;
+  margin-bottom: 3px;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 1000px) {
+  .section-layout {
+    flex-direction: column;
+  }
+  .section-right {
+    width: 100%;
+    position: static;
+  }
+}
+
+/* --- Page subtitle --- */
+.page-subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  padding: 10px 15px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  border-left: 4px solid #1976d2;
+}
+
+/* --- Code Labels --- */
+.code-label {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px 12px;
+  border-radius: 4px 4px 0 0;
+  margin-top: 14px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+.css-label {
+  background: #1976d2;
+}
+
+.html-label {
+  background: #e65100;
+}
+
+.output-label {
+  background: #2e7d32;
+}
+
+.editable-hint {
+  font-weight: normal;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+.code-label + pre,
+.code-label + .css-editor-wrapper,
+.code-label + .html-editor-wrapper {
+  margin-top: 0;
+}
+
+/* --- CSS Editor (Textarea) --- */
+.css-editor-wrapper {
+  position: relative;
+  margin: 0 0 5px 0;
+}
+
+.css-editor {
+  display: block;
+  width: 100%;
+  background: #263238;
+  color: #80cbc4;
+  padding: 14px 18px;
+  border: 2px solid #37474f;
+  border-radius: 0 8px 8px 8px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.css-editor:focus {
+  border-color: #64b5f6;
+  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.25);
+}
+
+.css-editor.css-edited {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+/* --- Apply / Reset Buttons (single set for both CSS & HTML) --- */
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 14px 0;
+  padding: 10px 14px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-apply {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-apply:hover {
+  background: #1b5e20;
+  transform: scale(1.03);
+}
+
+.btn-apply:active {
+  transform: scale(0.97);
+}
+
+.btn-reset {
+  background: #757575;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-reset:hover {
+  background: #616161;
+}
+
+.edited-badge {
+  font-size: 0.78em;
+  color: #ff9800;
+  font-weight: bold;
+  background: #fff3e0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid #ffcc80;
+}
+
+/* --- HTML Editor (Textarea) --- */
+.html-editor-wrapper {
+  position: relative;
+  margin: 0 0 5px 0;
+}
+
+.html-editor {
+  display: block;
+  width: 100%;
+  background: #1b2a33;
+  color: #ffcc80;
+  padding: 14px 18px;
+  border: 2px solid #37474f;
+  border-radius: 0 8px 8px 8px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.html-editor:focus {
+  border-color: #ffb74d;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.25);
+}
+
+.html-editor.html-edited {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.3);
+}
+
+/* --- HTML Code Block (pre) --- */
+.selector-section pre {
+  background: #263238;
+  color: #80cbc4;
+  padding: 14px 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+}
+
+.selector-section pre.html-code {
+  background: #1b2a33;
+  color: #ffcc80;
+  border-left: 4px solid #ff9800;
+  border-radius: 0 8px 8px 8px;
+}
+
+/* --- Live Output Demo --- */
+.demo {
+  margin-top: 0;
+  padding: 15px;
+  background: #fafafa;
+  border: 2px solid #c8e6c9;
+  border-radius: 0 8px 8px 8px;
+  position: relative;
+}
+
+.demo input[type="text"],
+.demo input[type="email"],
+.demo input[type="number"] {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}

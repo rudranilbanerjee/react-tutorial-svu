@@ -1,0 +1,751 @@
+/* ================================================
+   CSS BOX MODEL — Complete Teaching Reference
+   Matching CSSSelectors design language
+   ================================================ */
+
+/* --- Page Container --- */
+.box-model-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 24px 0 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.box-model-page h1 {
+  text-align: center;
+  font-size: 2.1em;
+  color: #1a237e;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+}
+
+.bm-page-subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 1.05em;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+/* ================================================
+   NAVIGATION BAR
+   ================================================ */
+.bm-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(248, 249, 250, 0.97);
+  z-index: 100;
+  border-bottom: 2px solid #e0e0e0;
+  backdrop-filter: blur(10px);
+}
+
+.bm-nav-bar-bottom {
+  position: static;
+  border-bottom: none;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 30px;
+  padding: 16px 0;
+}
+
+.bm-nav-arrow {
+  background: #1565c0;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-weight: bold;
+}
+
+.bm-nav-arrow:hover:not(:disabled) {
+  background: #0d47a1;
+  transform: scale(1.05);
+}
+
+.bm-nav-arrow:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.bm-nav-arrow:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.bm-nav-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bm-nav-dropdown {
+  padding: 7px 12px;
+  border: 2px solid #90caf9;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background: white;
+  color: #1a237e;
+  cursor: pointer;
+  min-width: 280px;
+  font-weight: 500;
+}
+
+.bm-nav-dropdown:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
+}
+
+.bm-nav-counter {
+  font-size: 0.95em;
+  color: #555;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ================================================
+   PROGRESS BAR
+   ================================================ */
+.bm-nav-progress-bar {
+  width: 100%;
+  height: 5px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.bm-nav-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1565c0, #42a5f5);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+/* ================================================
+   SECTION CARD
+   ================================================ */
+.bm-section {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.bm-section h2 {
+  font-size: 1.6em;
+  color: #0d47a1;
+  margin: 0 0 6px 0;
+  border-bottom: 3px solid #90caf9;
+  padding-bottom: 10px;
+}
+
+.bm-description {
+  color: #444;
+  font-size: 1.05em;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+/* ================================================
+   SECTION LAYOUT (Left = Editors + Demo, Right = Notes)
+   ================================================ */
+.bm-section-layout {
+  display: flex;
+  gap: 24px;
+}
+
+.bm-section-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.bm-section-right {
+  width: 370px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .bm-section-layout {
+    flex-direction: column;
+  }
+  .bm-section-right {
+    width: 100%;
+  }
+}
+
+/* ================================================
+   NOTES PANEL (Right side)
+   ================================================ */
+.bm-notes-panel {
+  background: #f5f7fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.bm-notes-title {
+  background: #1565c0;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 1.05em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.bm-notes-content {
+  padding: 16px;
+  font-size: 0.92em;
+  line-height: 1.65;
+  color: #333;
+}
+
+.bm-notes-content .note-section {
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bm-notes-content .note-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bm-notes-content .note-section-title {
+  font-weight: bold;
+  color: #0d47a1;
+  margin-bottom: 6px;
+  font-size: 1.05em;
+}
+
+.bm-notes-content code {
+  background: #e8eaf6;
+  color: #283593;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 0.92em;
+}
+
+.bm-notes-content ul,
+.bm-notes-content ol {
+  margin: 6px 0;
+  padding-left: 20px;
+}
+
+.bm-notes-content li {
+  margin-bottom: 4px;
+}
+
+.bm-notes-content table {
+  margin-top: 8px;
+}
+
+/* ================================================
+   CODE LABELS
+   ================================================ */
+.bm-code-label {
+  font-size: 0.88em;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 6px 6px 0 0;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.bm-css-label {
+  background: #263238;
+  color: #80cbc4;
+}
+
+.bm-html-label {
+  background: #1b2a33;
+  color: #ffcc80;
+}
+
+.bm-output-label {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+  border-bottom: none;
+}
+
+.bm-editable-hint {
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+/* ================================================
+   CSS EDITOR (Textarea)
+   ================================================ */
+.bm-css-editor-wrapper {
+  position: relative;
+  margin: 0 0 10px 0;
+}
+
+.bm-css-editor {
+  display: block;
+  width: 100%;
+  background: #263238;
+  color: #80cbc4;
+  padding: 14px 18px;
+  border: 2px solid #37474f;
+  border-radius: 0 8px 8px 8px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.bm-css-editor:focus {
+  border-color: #4dd0e1;
+  box-shadow: 0 0 0 3px rgba(77, 208, 225, 0.25);
+}
+
+.bm-css-editor.bm-css-edited {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+/* ================================================
+   HTML EDITOR (Textarea)
+   ================================================ */
+.bm-html-editor-wrapper {
+  position: relative;
+  margin: 0 0 5px 0;
+}
+
+.bm-html-editor {
+  display: block;
+  width: 100%;
+  background: #1b2a33;
+  color: #ffcc80;
+  padding: 14px 18px;
+  border: 2px solid #37474f;
+  border-radius: 0 8px 8px 8px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  resize: vertical;
+  min-height: 60px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.bm-html-editor:focus {
+  border-color: #ffb74d;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.25);
+}
+
+.bm-html-editor.bm-html-edited {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.3);
+}
+
+/* ================================================
+   APPLY / RESET BUTTONS
+   ================================================ */
+.bm-editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 14px 0;
+  padding: 10px 14px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.bm-btn-apply {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.bm-btn-apply:hover {
+  background: #1b5e20;
+  transform: scale(1.03);
+}
+
+.bm-btn-apply:active {
+  transform: scale(0.97);
+}
+
+.bm-btn-reset {
+  background: #757575;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bm-btn-reset:hover {
+  background: #616161;
+}
+
+.bm-edited-badge {
+  font-size: 0.78em;
+  color: #ff9800;
+  font-weight: bold;
+  background: #fff3e0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid #ffcc80;
+}
+
+/* ================================================
+   LIVE OUTPUT DEMO
+   ================================================ */
+.bm-demo {
+  margin-top: 0;
+  padding: 20px;
+  background: #fafafa;
+  border: 2px solid #c8e6c9;
+  border-radius: 0 8px 8px 8px;
+  position: relative;
+  min-height: 60px;
+}
+
+.bm-demo input[type="text"],
+.bm-demo input[type="email"],
+.bm-demo input[type="number"] {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* ================================================
+   SCROLLBAR STYLING (Notes Panel)
+   ================================================ */
+.bm-notes-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bm-notes-panel::-webkit-scrollbar-track {
+  background: #e8e8e8;
+  border-radius: 3px;
+}
+
+.bm-notes-panel::-webkit-scrollbar-thumb {
+  background: #90caf9;
+  border-radius: 3px;
+}
+
+.bm-notes-panel::-webkit-scrollbar-thumb:hover {
+  background: #42a5f5;
+}
+
+/* ================================================
+   RESPONSIVE ADJUSTMENTS
+   ================================================ */
+@media (max-width: 768px) {
+  .box-model-page {
+    padding: 16px 10px 0 10px;
+  }
+
+  .box-model-page h1 {
+    font-size: 1.5em;
+  }
+
+  .bm-section {
+    padding: 16px;
+  }
+
+  .bm-section h2 {
+    font-size: 1.3em;
+  }
+
+  .bm-nav-dropdown {
+    min-width: 180px;
+    font-size: 0.85em;
+  }
+
+  .bm-nav-arrow {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bm-nav-center {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bm-nav-dropdown {
+    min-width: 150px;
+  }
+}
+
+/* ================================================
+   BOX MODEL DIAGRAM — DevTools-Style Visualization
+   ================================================ */
+.bm-diagram-wrapper {
+  margin-top: 18px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 18px 18px 14px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.bm-diagram-title {
+  font-size: 1em;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 14px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.bm-diagram-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Layer structure (nested rectangles) --- */
+.bm-diagram-layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Per-layer dim states (background becomes near-transparent) --- */
+.bm-diagram-margin-dim {
+  background: rgba(249, 204, 157, 0.12) !important;
+  border-color: rgba(232, 150, 90, 0.15) !important;
+}
+
+.bm-diagram-border-dim {
+  background: rgba(253, 221, 155, 0.12) !important;
+  border-color: rgba(212, 168, 67, 0.15) !important;
+}
+
+.bm-diagram-padding-dim {
+  background: rgba(194, 219, 160, 0.12) !important;
+  border-color: rgba(142, 184, 94, 0.15) !important;
+}
+
+.bm-diagram-content-dim {
+  background: rgba(162, 196, 224, 0.12) !important;
+  border-color: rgba(91, 155, 213, 0.15) !important;
+}
+
+/* Dim labels and values in non-highlighted layers */
+.bm-diagram-label-dim {
+  opacity: 0.2;
+}
+
+.bm-diagram-val-dim {
+  opacity: 0.2;
+}
+
+/* --- MARGIN layer (outermost) --- */
+.bm-diagram-margin {
+  background: #f9cc9d;
+  border: 1.5px dashed #e8965a;
+  padding: 28px 44px;
+  min-width: 320px;
+  min-height: 220px;
+}
+
+/* --- BORDER layer --- */
+.bm-diagram-border {
+  background: #fddd9b;
+  border: 1.5px solid #d4a843;
+  padding: 24px 38px;
+  width: 100%;
+}
+
+/* --- PADDING layer --- */
+.bm-diagram-padding {
+  background: #c2dba0;
+  border: 1.5px solid #8eb85e;
+  padding: 22px 34px;
+  width: 100%;
+}
+
+/* --- CONTENT layer (innermost) --- */
+.bm-diagram-content {
+  background: #a2c4e0;
+  border: 1.5px solid #5b9bd5;
+  padding: 18px 26px;
+  min-width: 90px;
+  min-height: 42px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bm-diagram-content-size {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #1a3a5c;
+  white-space: nowrap;
+}
+
+/* --- Layer labels (top-left corner) --- */
+.bm-diagram-layer-label {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(0,0,0,0.45);
+  pointer-events: none;
+}
+
+/* --- Value labels on each side --- */
+.bm-diagram-val {
+  position: absolute;
+  font-size: 0.78em;
+  font-weight: 700;
+  color: #333;
+  pointer-events: none;
+  background: rgba(255,255,255,0.65);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.bm-diagram-val-top {
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bm-diagram-val-right {
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bm-diagram-val-bottom {
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bm-diagram-val-left {
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --- Highlight label --- */
+.bm-diagram-highlight-label {
+  text-align: center;
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* --- Legend --- */
+.bm-diagram-legend {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.bm-diagram-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+}
+
+.bm-legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.bm-legend-margin {
+  background: #f9cc9d;
+}
+
+.bm-legend-border {
+  background: #fddd9b;
+}
+
+.bm-legend-padding {
+  background: #c2dba0;
+}
+
+.bm-legend-content {
+  background: #a2c4e0;
+}
+
+/* --- Responsive diagram --- */
+@media (max-width: 700px) {
+  .bm-diagram-margin {
+    min-width: 240px;
+    min-height: 180px;
+    padding: 22px 28px;
+  }
+
+  .bm-diagram-border {
+    padding: 18px 24px;
+  }
+
+  .bm-diagram-padding {
+    padding: 16px 20px;
+  }
+
+  .bm-diagram-content {
+    padding: 14px 18px;
+    min-width: 70px;
+    min-height: 34px;
+  }
+
+  .bm-diagram-val {
+    font-size: 0.7em;
+  }
+
+  .bm-diagram-legend {
+    gap: 10px;
+  }
+}
